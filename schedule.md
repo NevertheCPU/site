@@ -4,9 +4,9 @@ title: Saturday Conference Schedule - BSides Orlando October 19, 2024
 permalink: /schedule/
 ---
 
-# BSides Orlando 2024 Conference Schedule
+# BSides Orlando 2025 Conference Schedule
 
-<script type="text/javascript" src="https://sessionize.com/api/v2/a2vlq587/view/GridSmart"></script>
+[comment]: <> (<script type="text/javascript" src="https://sessionize.com/api/v2/a2vlq587/view/GridSmart"></script>)
 
 _Schedule subject to change, updates will be posted here and at the conference._
 {: .text-center}
