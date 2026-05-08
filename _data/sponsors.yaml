@@ -4,11 +4,11 @@
 #  level: Diamond | Platinum | Gold | Silver | Bronze | Community Partners
 
 # Diamond
-# - name: Advent Health
-#   logo: logo-DIAMOND-AdventHealth.png
-#   url: https://www.adventhealth.com/
-#   level: Diamond
-#   scale: .8
+- name: Advent Health
+  logo: logo-DIAMOND-AdventHealth.png
+  url: https://www.adventhealth.com/
+  level: Diamond
+  scale: .8
 - name: Research Innovations Incorporated
   logo: logo-DIAMOND-RII.svg
   url: https://www.researchinnovations.com/
@@ -66,6 +66,11 @@
 #   scale: .9
 
 # Silver
+- name: Secure Point Solutions
+  logo: logo-SILVER-SecurePoint.png
+  url: https://www.secureps.net/
+  level: Silver
+  scale: 1.5
 # - name: Black Hills Infosec
 #   logo: logo-SILVER-BHIS.png
 #   url: https://www.blackhillsinfosec.com/
@@ -109,11 +114,6 @@
 #   logo: logo-BRONZE-KevtechAcademy.png
 #   url: https://www.kevtechitsupport.com/
 #   level: Bronze
-# - name: Secure Point Solutions
-#   logo: logo-BRONZE-SecurePoint.png
-#   url: https://www.secureps.net/
-#   level: Bronze
-#   scale: 1.5
 # - name: Orlando Health
 #   logo: logo-BRONZE-Orlando Health.jpg
 #   level: Bronze
