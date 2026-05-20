@@ -6,6 +6,6 @@ permalink: /speakers/
 
 # BSides Orlando 2026 Speakers
 
-Currently call for papers isn't open yet, but keep your eyes peeled!
+Want to become a Speaker at BSides Orlando 2026? Our [Call for Sessions](https://sessionize.com/bsides-orlando-2026) is open now! More information about what to expect is available here: [https://sessionize.com/bsides-orlando-2026](https://sessionize.com/bsides-orlando-2026).
 
  
