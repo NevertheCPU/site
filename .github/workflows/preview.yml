@@ -36,5 +36,5 @@ jobs:
               uses: rossjrw/pr-preview-action@v1
               with:
                   source-dir: ./_site/
-                  preview-branch: main
+                  preview-branch: gh-pages
                   qr-code: true
