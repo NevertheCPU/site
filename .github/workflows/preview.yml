@@ -38,4 +38,4 @@ jobs:
                   source-dir: ./_site/
                   preview-branch: gh-pages
                   qr-code: true
-                  pages-base-url: "/preview${{ steps.pages.outputs.base_path }}"
+                  pages-base-url: "neverthecpu.github.io/preview${{ steps.pages.outputs.base_path }}"
