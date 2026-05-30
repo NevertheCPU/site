@@ -41,4 +41,4 @@ jobs:
                   source-dir: ./_site/
                   preview-branch: main
                   qr-code: true
-                  pages-base-url: "dev.neverthecpu.github.io${{ steps.pages.outputs.base_path }}"
+                  pages-base-url: "neverthecpu.github.io${{ steps.pages.outputs.base_path }}"
