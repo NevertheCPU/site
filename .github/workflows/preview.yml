@@ -39,7 +39,7 @@ jobs:
               uses: rossjrw/pr-preview-action@v1
               with:
                   source-dir: ./_site/
-                  preview-branch: main
+                  preview-branch: gh-pages
                   qr-code: true
                   pages-base-url: "neverthecpu.github.io${{ steps.pages.outputs.base_path }}"
 
