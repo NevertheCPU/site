@@ -44,6 +44,7 @@ jobs:
             - name: Enabling Jekyll
               run: if [ -f ./_site/.nojekyll ]; then
                    rm ./_site/.nojekyll
+                   fi
 
             - name: Deploy preview
               uses: rossjrw/pr-preview-action@v1
@@ -72,7 +73,9 @@ jobs:
 
             # Create subdomain
             - name: CNAME Removal
-              run: rm CNAME
+              run: if [ -f CNAME ]; then
+                   rm CNAME
+                   fi
 
             # Remove any jekyll inhibiting
             - name: Disable Jekyll
