@@ -42,7 +42,8 @@ jobs:
 
             # Remove any jekyll inhibiting
             - name: Enabling Jekyll
-              run: rm ./build_output_directory/.nojekyll
+              run: if [ -f ./_site/.nojekyll ]; then
+                   rm ./_site/.nojekyll
 
             - name: Deploy preview
               uses: rossjrw/pr-preview-action@v1
@@ -75,7 +76,7 @@ jobs:
 
             # Remove any jekyll inhibiting
             - name: Disable Jekyll
-              run: touch ./build_output_directory/.nojekyll
+              run: touch ./_site/.nojekyll
               
             - name: Deploy preview
               uses: rossjrw/pr-preview-action@v1
