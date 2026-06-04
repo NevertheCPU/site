@@ -36,7 +36,7 @@ jobs:
         run: |
           # Write a temporary config that overrides baseurl for the preview path.
           @"
-          url: "https://dev.neverthecpu.github.io"
+          url: "https://neverthecpu.github.io"
           baseurl: "/previews/pr-${{ github.event.pull_request.number }}"
           "@ | Set-Content -Path /tmp/_config_preview.yml
 
