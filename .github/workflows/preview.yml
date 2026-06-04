@@ -41,10 +41,11 @@ jobs:
               run: echo "dev.neverthecpu.github.io" > CNAME
 
             # Remove any jekyll inhibiting
-            - name: Enabling Jekyll
-              run: if [ -f ./_site/.nojekyll ]; then
-                   rm ./_site/.nojekyll
-                   fi
+            #- name: Enabling Jekyll
+         #     run: if [ -f ./_site/.nojekyll ]; 
+            #       then
+            #          rm ./_site/.nojekyll
+            #       fi
 
             - name: Deploy preview
               uses: rossjrw/pr-preview-action@v1
