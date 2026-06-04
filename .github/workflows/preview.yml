@@ -36,6 +36,14 @@ jobs:
                 # Automatically uploads an artifact from the './_site' directory by default
               uses: actions/upload-pages-artifact@v3
 
+            # Create subdomain
+            - name: CNAME Creation
+              run: echo "dev.neverthecpu.github.io" > CNAME
+
+            # Remove any jekyll inhibiting
+            - name: Enabling Jekyll
+              run: rm ./build_output_directory/.nojekyll
+
             - name: Deploy preview
               uses: rossjrw/pr-preview-action@v1
               with:
@@ -61,6 +69,14 @@ jobs:
                 # Automatically uploads an artifact from the './_site' directory by default
               uses: remagpie/gha-remove-artifact@17a089caac8f6b2bbcb3a2dab795ec6228e7d6e2
 
+            # Create subdomain
+            - name: CNAME Removal
+              run: rm CNAME
+
+            # Remove any jekyll inhibiting
+            - name: Disable Jekyll
+              run: touch ./build_output_directory/.nojekyll
+              
             - name: Deploy preview
               uses: rossjrw/pr-preview-action@v1
               with:
