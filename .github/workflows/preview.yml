@@ -56,6 +56,7 @@ jobs:
           publish_dir: ./_site_preview
           destination_dir: previews/pr-${{ github.event.pull_request.number }}
           keep_files: true
+          enable_jekyll: true
           commit_message: "Deploy preview for PR #${{ github.event.pull_request.number }} (${{ github.sha }})"
 
       - name: Post / Update preview URL comment on PR
