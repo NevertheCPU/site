@@ -47,6 +47,32 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+
+      # Preserve any PR preview directories that already live on gh-pages so
+      # that a main-site redeploy does not wipe them out.
+      - name: Restore previews directories from gh-pages branch (if present)
+        shell: pwsh
+        run: |
+          git ls-remote --exit-code --heads origin gh-pages *> $null
+          if ($LASTEXITCODE -ne 0) {
+            Write-Host "gh-pages branch does not exist yet - skipping restore."
+            exit 0
+          }
+
+          git fetch origin gh-pages --depth=1
+
+          # Copy the previews tree into the freshly built _site so the
+          # subsequent deploy action includes it in the push.
+          git checkout origin/gh-pages -- previews/ 2>$null
+          if ($LASTEXITCODE -eq 0) {
+            Copy-Item -Recurse -Force previews _site/previews
+            Remove-Item -Recurse -Force previews
+          }
+          else {
+            Write-Host "No previews directory on gh-pages yet - skipping restore."
+            exit 0
+          }
+      
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
