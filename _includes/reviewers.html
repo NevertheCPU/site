@@ -3,7 +3,7 @@
   {% for reviewer in reviewers %}
     <div class="reviewer-card">
       <a href="{{ reviewer.url }}" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ reviewer.name }} website">
-        <img loading="lazy" decoding="async" src="/assets/images/reviewer/{{ reviewer.headshot }}" alt="{{ reviewer.name }}"{% if reviewer.scale %} style="transform: scale({{ reviewer.scale }});"{% endif %}>
+        <img loading="lazy" decoding="async" src="/assets/images/reviewers/{{ reviewer.headshot }}" alt="{{ reviewer.name }}"{% if reviewer.scale %} style="transform: scale({{ reviewer.scale }});"{% endif %}>
       </a>
     </div>
   {% endfor %}
